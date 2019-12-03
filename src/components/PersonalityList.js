@@ -285,7 +285,7 @@ export default connect(state => ({
                     <span className="type-label-socionics-formal">{socionicsFormalName}</span>
                 </div>
                 {displayOptions.features.includes('eeg')
-                    ? (<div className="typeEeg"><img src={'img/eeg/' + type + '.png'} /></div>)
+                    ? (<div className="typeEeg"><img src={'img/eeg/' + type.toLowerCase() + '.png'} /></div>)
                     : ''
                 }
                 {displayOptions.features.includes('cognitiveFunctions') ? cognitiveFunctions.map((cognitiveFunction, cognitiveFunctionIndex) => {

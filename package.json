@@ -1,6 +1,7 @@
 {
   "name": "personality-nexus",
   "version": "0.0.1",
+  "homepage": "/demos/personality-nexus/",
   "private": true,
   "devDependencies": {
     "react-scripts": "^3.2.0"
