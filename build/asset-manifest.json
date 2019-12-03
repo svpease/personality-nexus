@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b0ec29ef.chunk.css",
+    "main.js": "/static/js/main.69fc7bf7.chunk.js",
+    "main.js.map": "/static/js/main.69fc7bf7.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.49fc6581.chunk.js": "/static/js/2.49fc6581.chunk.js",
+    "static/js/2.49fc6581.chunk.js.map": "/static/js/2.49fc6581.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8ff77935f4475d561d0d70679325bea4.js": "/precache-manifest.8ff77935f4475d561d0d70679325bea4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b0ec29ef.chunk.css.map": "/static/css/main.b0ec29ef.chunk.css.map",
+    "static/media/mbti-flashcards.css": "/static/media/font.ec139123.woff"
+  }
+}

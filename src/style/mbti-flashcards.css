@@ -1,0 +1,456 @@
+/**
+ * MBTI Flashcards v1.0.0
+ *
+ * Copyright 2015 Steven Pease
+ * Released under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+body {
+    font-family: Helvetica, Arial;
+}
+
+.mbti-app-toolbar {
+    padding: 4px;
+}
+
+.mbti-app-toolbar-label {
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.typeLabel span {
+    display: block;
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+.searching-mbti .typeLabel span.type-label-mbti,
+.searching-socionics .typeLabel span.type-label-socionics,
+.searching-socionics-formal .typeLabel span.type-label-socionics-formal {
+    opacity: 1;
+    font-size: 1.2em;
+}
+
+.mbti-app-toolbar-input {
+    width: 300px;
+    line-height: 20px;
+}
+
+.mbti-app-toolbar-label,
+.mbti-app-toolbar-input {
+    float: left;
+    display: block;
+    margin: 0 6px;
+    height: 20px;
+}
+
+.mbti-app-types-container {
+    clear: both;
+}
+
+.section-temperament-value {
+    display: block;
+}
+
+.temperament-label {
+    font-weight: bold;
+    background: #333;
+    color: white;
+    line-height: 1.4em;
+    padding: 0.4em 0;
+}
+
+.temperament-section-label {
+    font-weight: bold;
+    font-style: italic;
+    padding: 0.4em 0 0.2em 0;
+}
+
+.temperament-sections {
+    font-size: 80%;
+}
+
+
+.temperament {
+    margin: 0;
+}
+
+.temperament-sections {
+    /*margin: 0 0 10px 0;*/
+}
+
+.temperament-label-SP {
+    background: #fca503;
+}
+.temperament-label-SJ {
+    background: #084abd;
+}
+.temperament-label-NF {
+    background: #fc1803;
+}
+.temperament-label-NT {
+    background: #00a305;
+}
+
+.temperament-label {
+    cursor: hand;
+    cursor: pointer;
+}
+
+.section-temperament-value:nth-child(even) {
+    background: #ccc;
+}
+.section-temperament-value:nth-child(odd) {
+    background: #c0c0c0;
+}
+.section-temperament-value {
+    padding: 0.2em 0;
+}
+
+.typeContainer {
+    min-width: 5em;
+    text-align: center;
+    color: #333;
+    background: #ddd;
+    border: 0;
+    /*
+    border-radius: 2px; 
+    border: 1px solid #333;
+    */
+    margin: 3px;
+    float: left;
+}
+
+.typeLabel {
+    color: White;
+    background: #333;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.cognitiveFunction {
+    /* margin: 2px; */
+    cursor: hand;
+    cursor: pointer;
+    color: black;
+    height: 1.4em;
+}
+
+.cognitiveFunction div {
+    display: inline-block;
+    width: 2em;
+}
+
+.cognitiveFunction .socionics-icon {
+    line-height: 1.4em;
+}
+
+.cognitiveFunction.invisible {
+    visibility: hidden;
+}
+
+.cognitiveFunction:hover {
+    color: #3b5998;
+}
+
+/*
+.tier1 {
+    font-weight: bold;
+    padding: 6px;
+}
+
+.tier4, .tier8 {
+    padding-bottom: 6px;
+}
+*/
+
+.cognitiveFunction {
+    padding: 3px;
+}
+
+.tier1 {
+    padding: 6px 0 3px;
+    font-weight: bold;
+    color: black;
+}
+
+.tier2 {
+    font-weight: bold;
+}
+
+.tier2, .tier4 {
+    margin: 3px 0 6px 0;
+}
+
+.tier3, .tier4 {
+    color: #454545;
+}
+
+.tier5, .tier6 {
+    color: #888;
+}
+
+.tier7, .tier8 {
+    color: #aaa;
+}
+
+.sortPriority1,
+.sortPriority1:hover {
+    background: #3b5998;
+    color: white;
+}
+
+.typeEeg img {
+    width: 5em;
+}
+
+@font-face {
+  font-family: 'socionics';
+  src:  url('../fonts/socionics/font.eot?wqpkrl');
+  src:  url('../fonts/socionics/font.eot?wqpkrl#iefix') format('embedded-opentype'),
+    url('../fonts/socionics/font.ttf?wqpkrl') format('truetype'),
+    url('../fonts/socionics/font.woff?wqpkrl') format('woff'),
+    url('../fonts/socionics/font.svg?wqpkrl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'socionics' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Fe:before {
+  content: "\e900";
+}
+.icon-Fi:before {
+  content: "\e901";
+}
+.icon-Ne:before {
+  content: "\e902";
+}
+.icon-Ni:before {
+  content: "\e903";
+}
+.icon-Se:before {
+  content: "\e904";
+}
+.icon-Si:before {
+  content: "\e905";
+}
+.icon-Te:before {
+  content: "\e906";
+}
+.icon-Ti:before {
+  content: "\e907";
+}
+
+.cognitive-icon {
+    font-size: 90%;
+}
+
+
+/* .squaredFour */
+
+.display-options {
+  clear: both;
+}
+.squaredFour {
+  width: 20px;
+  position: relative;
+  margin: 20px auto;
+}
+.squaredFour label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcfff4;
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.squaredFour label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.squaredFour label:hover::after {
+  opacity: 0.5;
+}
+.squaredFour input[type=checkbox] {
+  visibility: hidden;
+}
+.squaredFour input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+/* end .squaredFour */
+
+.features {
+  clear: both;
+}
+
+/* expanding search form BEGIN 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+.expanding-search-form {
+  display: inline-block;
+  height: 34px;
+  width: auto;
+}
+.expanding-search-form .search-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #999;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 250ms all ease-in-out;
+}
+.expanding-search-form .search-input {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  height: 34px;
+  width: 150px;
+  float: left;
+  border: 0;
+  font-size: 16px;
+  z-index: 2;
+  box-shadow: none;
+  border-radius: 0;
+  transition: 250ms all ease-in-out;
+}
+.expanding-search-form .search-input:focus {
+  width: 300px;
+  outline: none;
+}
+.expanding-search-form .search-input:focus + .search-label {
+  border-color: #2299ff;
+}
+.expanding-search-form .button {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  float: left;
+  padding: 0 10px;
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #2299ff;
+  text-align: center;
+  transition: 250ms all ease-in-out;
+}
+.expanding-search-form .button:hover {
+  background-color: #0080ee;
+}
+.expanding-search-form .search-dropdown {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  float: left;
+  padding: 3px;
+}
+.expanding-search-form .search-dropdown.open .dropdown-menu {
+  display: block;
+}
+.expanding-search-form .dropdown-toggle {
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  border-radius: 2px;
+  z-index: 3;
+}
+.expanding-search-form .dropdown-menu {
+  position: absolute;
+  top: calc(100% - 1px);
+  display: none;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 3;
+  transition: 250ms all ease-in-out;
+}
+.expanding-search-form .dropdown-menu > li > a {
+  display: block;
+  padding: 4px 12px;
+  color: #2299ff;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 250ms all ease-in-out;
+}
+.expanding-search-form .dropdown-menu > li > a:hover {
+  color: #fff;
+  background-color: #2299ff;
+}
+.expanding-search-form .dropdown-menu > .menu-active {
+  display: none;
+}
+.expanding-search-form .search-button {
+  height: 34px;
+  z-index: 3;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.expanding-search-form .search-button .icon {
+  font-size: 20px;
+}
+
+.dropdown-menu a {
+  white-space: nowrap;
+}
+/* expanding search form END */
