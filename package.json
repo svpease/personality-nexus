@@ -4,7 +4,7 @@
   "homepage": "/demos/personality-nexus/",
   "private": true,
   "devDependencies": {
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^3.4.4"
   },
   "dependencies": {
     "classnames": "^2.2.6",
